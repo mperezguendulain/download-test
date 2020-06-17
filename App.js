@@ -1,20 +1,12 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React, {
   useCallback
 } from 'react';
 import {
   SafeAreaView,
-  View,
   Text,
   StatusBar,
-  TouchableHighlight
+  TouchableHighlight,
+  PermissionsAndroid
 } from 'react-native';
 import * as RNFS from 'react-native-fs';
 
@@ -49,7 +41,7 @@ const App = () => {
 
   const downloadFile = useCallback(() => {
     
-    var url       = "https://cdn.memegenerator.es/imagenes/memes/full/18/33/18331544.jpg";
+    var url = "https://cdn.memegenerator.es/imagenes/memes/full/18/33/18331544.jpg";
 
     const downloadFileOptions = {
       fromUrl: url,
@@ -64,10 +56,6 @@ const App = () => {
       );
 
   }, []);
-
-  const extention = (filename) => {
-    return (/[.]/.exec(filename)) ? /[^.]+$/.exec(filename) : undefined;
-  }
 
   return (
     <>

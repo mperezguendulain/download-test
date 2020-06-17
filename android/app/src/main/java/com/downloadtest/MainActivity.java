@@ -1,5 +1,9 @@
 package com.downloadtest;
+import com.facebook.react.shell.MainReactPackage;
+import com.facebook.react.ReactPackage;
 import com.rnfs.RNFSPackage;
+import java.util.List;
+import java.util.Arrays;
 
 import com.facebook.react.ReactActivity;
 
@@ -14,7 +18,6 @@ public class MainActivity extends ReactActivity {
     return "DownloadTest";
   }
 
-  @Override
   protected List<ReactPackage> getPackages() {
     return Arrays.<ReactPackage>asList(
       new MainReactPackage(), // <---- add comma
